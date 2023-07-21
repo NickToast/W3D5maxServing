@@ -63,7 +63,7 @@ delete available3["broccoli seeds"];
    * @returns {number} Max servings of the recipe that can be made.
    */
 function getMaxServings(recipe, available) {
-    let lowestIngred = 0;
+    // let lowestIngred = 0;
     let lowestCount = -1;
 
     for (const key in recipe) {
@@ -72,10 +72,10 @@ function getMaxServings(recipe, available) {
             return 'Max servings: 0';
         } else if (lowestCount == -1) {
             lowestCount = count;
-            lowestIngred = key;
+            // lowestIngred = key;
         } else if (count < lowestCount) {
             lowestCount = count;
-            lowestIngred = key;
+            // lowestIngred = key;
         }
     }
 
