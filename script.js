@@ -69,7 +69,7 @@ function getMaxServings(recipe, available) {
     for (const key in recipe) {
         let count = available[key] / recipe [key]
         if (!available.hasOwnProperty(key)) {
-            return 0;
+            return 'Max servings: 0';
         } else if (lowestCount == -1) {
             lowestCount = count;
             lowestIngred = key;
@@ -79,7 +79,7 @@ function getMaxServings(recipe, available) {
         }
     }
 
-    return lowestCount
+    return (`Max servings: ${lowestCount}`)
 }
 
 console.log(getMaxServings(recipe1, available1))
